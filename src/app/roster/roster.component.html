@@ -1,0 +1,7 @@
+<p>roster works!</p>
+<label>First name: <input type="text" #firstName /></label>
+<label>Last name: <input type="text" #lastName /></label>
+<input type="button" (click)="add_student(firstName.value, lastName.value)" value="Add to Roster"/>
+<ul>
+<li *ngFor="let student of roster">{{student["first_name"]}} {{student["last_name"]}} <input type="button" value="Remove"></li>
+</ul>
